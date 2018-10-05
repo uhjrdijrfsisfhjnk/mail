@@ -14,4 +14,16 @@ var channel = "492852383089426433";
     },305);
 })
 
+         client.on('message', message => {
+            if (message.content === 'yousif') {
+              message.channel.send('#daily');
+            }
+});
+
+         client.on('message', message => {
+            if (message.content === 'yousif') {
+              message.channel.send('#credit');
+            }
+});
+
 client.login(process.env.BOT_TOKEN); 
