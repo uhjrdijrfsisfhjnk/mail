@@ -15,25 +15,17 @@ var channel = "492852383089426433";
 })
 
          client.on('message', message => {
-            if (message.content === 'yousif') {
+            if (message.content === 'daily') {
               message.channel.send('#daily');
             }
 });
 
          client.on('message', message => {
-            if (message.content === 'yousif') {
+            if (message.content === 'credit') {
               message.channel.send('#credit');
             }
 });
 
-client.on('ready', () => {
-    let channel_id = "493590861461061652";
-    var channel = message.guild.channels.get(channel_id);
-    if(channel.type == 'voice') {
-        channel.join();
-    } else {
-        console.log('...');
-    }
-});
+
 
 client.login(process.env.BOT_TOKEN); 
