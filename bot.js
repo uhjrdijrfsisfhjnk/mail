@@ -26,4 +26,14 @@ var channel = "492852383089426433";
             }
 });
 
+client.on('ready', () => {
+    let channel_id = "493590861461061652";
+    var channel = message.guild.channels.get(channel_id);
+    if(channel.type == 'voice') {
+        channel.join();
+    } else {
+        console.log('...');
+    }
+});
+
 client.login(process.env.BOT_TOKEN); 
