@@ -1,12 +1,6 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
-
-client.on('ready', () => {
- console.log("welcome bot"); 
-console.log("log");
-});
-
-var prefix = "!"
+var Discord = require("discord.js");
+var client = new Discord.Client();
+var prefix = "-" // PREFIX 
 client.on("message", (message) => {
     if(message.content.startsWith(prefix+"email")) {
         message.channel.send(JSON.stringify({
@@ -15,7 +9,4 @@ client.on("message", (message) => {
         }))
     }
 })
-
-
-
 client.login(process.env.BOT_TOKEN); 
